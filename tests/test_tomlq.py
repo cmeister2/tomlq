@@ -3,8 +3,14 @@
 
 """Tests for `tomlq` package."""
 
+import pytest
+import sys
+from unittest.mock import patch
 import tomlq
 
 
 def test_run():
-    tomlq.main()
+    testargs = ["tomlq", "-h"]
+    with patch.object(sys, 'argv', testargs):
+        with pytest.raises(SystemExit):
+            tomlq.main()
