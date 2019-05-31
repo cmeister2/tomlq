@@ -15,7 +15,7 @@ requirements = ['yq[toml]>=2.7.2']
 
 setup_requirements = ['pytest-runner', ]
 
-test_requirements = ['pytest', ]
+test_requirements = ['pytest', 'mock' ]
 
 setup(
     author="Max Dymond",
